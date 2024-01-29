@@ -26,18 +26,18 @@ public class App {
                     System.out.println("Anna eläimen ikä:");
                     int ika = scanner.nextInt(); 
 
-                    Elukka uusiElain = new Elukka(laji, nimi, ika); //Luodaan Elukka olio.
-                    elaintarha.addElukka(uusiElain);//Kutsutaan addElukka metodia.
+                    Animal uusiElain = new Animal(laji, nimi, ika); //Luodaan Animal olio.
+                    elaintarha.addAnimal(uusiElain);//Kutsutaan addAnimal metodia.
                     break;
                     
                 case 2:
-                    elaintarha.listElukat();//Kutsutaan listElukat metodia.
+                    elaintarha.listAnimal();//Kutsutaan listAnimal metodia.
                     break;
 
                 case 3:
                     System.out.println("Kuinka monta kierrosta?");
                     int kierrokset = scanner.nextInt();
-                    elaintarha.runElukat(kierrokset);//Kutsutaan runElukat metodia.
+                    elaintarha.runAnimal(kierrokset);//Kutsutaan runAnimal metodia.
                     break;
 
                 case 0:
