@@ -8,10 +8,10 @@ public class App {
         Scanner scanner = new Scanner(System.in); //Tämän avulla luetaan käyttäjän syöte.
 
         System.out.println("Anna eläintarhan nimi:");
-        String tarhaNimi = scanner.nextLine();
-
-        Zoo elaintarha = new Zoo(tarhaNimi); //Luodaan Zoo olio.
-
+        if (scanner.hasNextLine()) {
+            String tarhaNimi = scanner.nextLine();
+            Zoo elaintarha = new Zoo(tarhaNimi);
+        
         while (true) { //Aloitetaan loop.
             System.out.println("1) Luo uusi eläin, 2) Listaa kaikki eläimet, 3) Juoksuta eläimiä, 0) Lopeta ohjelma");
             int valinta = scanner.nextInt();
@@ -50,7 +50,7 @@ public class App {
                 default:
                     System.out.println("Syöte oli väärä.");
                     break;
-            }
+            }   
         }
     }
-}
+}}
