@@ -24,7 +24,8 @@ public class App {
                     System.out.println("Anna eläimen nimi:");
                     String nimi = scanner.nextLine();
                     System.out.println("Anna eläimen ikä:");
-                    int ika = scanner.nextInt(); 
+                    int ika = scanner.nextInt();
+                    scanner.nextLine(); // Tyhjentää rivinvaihdon 
 
                     Animal uusiElain = new Animal(laji, nimi, ika); //Luodaan Animal olio.
                     elaintarha.addAnimal(uusiElain);//Kutsutaan addAnimal metodia.
@@ -37,6 +38,7 @@ public class App {
                 case 3:
                     System.out.println("Kuinka monta kierrosta?");
                     int kierrokset = scanner.nextInt();
+                    scanner.nextLine(); // Tyhjentää rivinvaihdon
                     elaintarha.runAnimal(kierrokset);//Kutsutaan runAnimal metodia.
                     break;
 
